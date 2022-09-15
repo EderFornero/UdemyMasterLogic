@@ -1,9 +1,12 @@
-function coincidencias(frase, busqueda) {
+//buscar palabras en una frase
 
-    let text = frase.toLowerCase().replace(/[+,.]/gi, "")
+
+function coincidence(phrase, search) {
+
+    let text = phrase.toLowerCase().replace(/[+,.]/gi, "")
     let result = 0;
 
-    if (text.includes(busqueda)) {
+    if (text.includes(search)) {
         let words = text.split(" ")
         let map = {};
 
@@ -15,7 +18,7 @@ function coincidencias(frase, busqueda) {
             }
         }
 
-        result = map[busqueda]
+        result = map[search]
       
     } else {
         result = 0;
@@ -23,4 +26,4 @@ function coincidencias(frase, busqueda) {
     return result;
 }
 
-console.log(coincidencias("Hola, no me salen los ejercicios, chau. eder eder eder", "master"));
+console.log(coincidence("Hola, no me salen los ejercicios, chau. eder eder eder", "eder"));
