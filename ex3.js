@@ -26,4 +26,4 @@ function coincidence(phrase, search) {
     return result;
 }
 
-console.log(coincidence("Hola, no me salen los ejercicios, chau. eder eder eder", "eder"));
+console.log(coincidence("Prueba de texto. eder eder eder", "eder"));
